@@ -3,6 +3,7 @@
 Inainte de a incepe sa lucrati, veti avea nevoie de urmatoarele lucruri:
 * Un editor de text (recomand [Visual Studio Code](https://code.visualstudio.com/download), dar puteti alege si altul)
 * [Node.js](https://nodejs.org/en/) instalat
+* Instalati Git
 * Un cont de GitHub
 
 ## Proiect si notare
