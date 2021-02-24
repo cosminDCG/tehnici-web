@@ -1,0 +1,20 @@
+.header-style {
+    background-color: blue;
+}
+
+#anchor-style {
+    color: blueviolet;
+}
+
+tr:nth-child(even) {
+    background-color: cadetblue;
+}
+
+tr:nth-child(odd) {
+    background-color: red;
+}
+
+.div1 > p {
+    color: saddlebrown;
+}
+

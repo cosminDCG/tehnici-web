@@ -1,0 +1,155 @@
+.resume-info {
+    line-height: 25px;
+}
+
+.resume-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 60px;
+}
+
+.resume-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.resume-date {
+    display: inline;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #5bc0de;
+    float:right;
+    margin-top: -5%;
+    border-radius: 10%;
+}
+
+.resume-date:nth-child(4) {
+    background-color: #c0392b;
+}
+
+
+.skills {
+    padding: 0;
+    margin-bottom: 36px;
+    list-style-type: none;
+}
+
+.resume-aside {
+    border-left: 1px solid #f1f1f1;
+    margin-left: 15px;
+    padding-left: 20px;
+    width: 30%;
+}
+
+.skills-item {
+    margin-bottom: 15px;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    color: #FFF;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.skills-bg {
+    padding: 2px 5px;
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); 
+    background-size: 5rem 5rem;
+    z-index: 1;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+ 
+  .photoshop {
+    width: 40%;
+    background: #2ecc71;
+  }
+  
+  .ilustrator {
+    width: 90%;
+    background: #e67e22;
+  }
+  
+  .indesign {
+    width: 60%;
+    background: #8e44ad;
+  }
+  
+  .xd {
+    width: 45%;
+    background: #f1c40f;
+  }
+  
+  .sketch {
+    width: 75%;
+    background: #2c3e50;
+  }
+  .office {
+    width: 60%;
+    background: #c0392b;
+  }
+  
+  .linux {
+    width: 65%;
+    background: #555;
+  }
+  
+  .user {
+    width: 30%;
+    background: #2ecc71;
+  }
+  
+  .typography {
+    width: 90%;
+    background: #e67e22;
+  }
+  
+  .web {
+    width: 65%;
+    background: #8e44ad;
+  }
+  
+  .html {
+    width: 50%;
+    background: #2ecc71;
+  }
+  
+  .php {
+    width: 80%;
+    background: #e67e22;
+  }
+  
+  .javascript {
+    width: 95%;
+    background: #8e44ad;
+  }
+  
+  .ruby {
+    width: 65%;
+    background: #f1c40f;
+  }
+  
+  .python {
+    width: 80%;
+    background: #2c3e50;
+  }
