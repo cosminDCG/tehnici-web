@@ -18,3 +18,12 @@ tr:nth-child(odd) {
     color: saddlebrown;
 }
 
+@media (max-width: 767px) {
+    .header-style {
+        background-color: brown;
+    }
+
+    .header-style:hover {
+        color: red;
+    }
+}
