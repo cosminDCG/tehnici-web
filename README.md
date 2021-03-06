@@ -21,7 +21,7 @@ Pe parcursul semestrului vor exista 3 verificari ale proiectului, care vor viza 
   * aplicarea stilului folosind clase si id-uri pe cat mai multe elemente din pagina (0.5)
   * layout pe coloane folosind flexbox si/sau grid (2 puncte)
   * sa aveti cel putin 2 pagini legate intre ele prin ancora (1 punct)
-  * site-ul sa fie responsive pentru urmatoarele dimenstiune: latime mai mica de 768px, latime intre 768px si 1280px, latime mai mare de 1280px (4 puncte)
+  * site-ul sa fie responsive pentru urmatoarele dimenstiuni: latime mai mica de 768px, latime intre 768px si 1280px, latime mai mare de 1280px (4 puncte)
 * **Javascript (11 puncte)**
 * **Node.js (9 puncte)**
 Cerintele pentru fiecare dintre parti vi le voi comunica in timp util
