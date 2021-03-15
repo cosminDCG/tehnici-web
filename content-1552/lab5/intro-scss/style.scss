@@ -1,0 +1,43 @@
+$font-color: rgb(194, 96, 96);
+
+h1 {
+    color: $font-color;
+}
+
+div {
+    article {
+        h2 {
+            color: red;
+        }
+    }
+}
+
+@mixin important-text($size-property) {
+    color: blue;
+    font-size: $size-property;
+    font-weight: bold;
+}
+
+.class1 {
+    @include important-text(25px);
+}
+
+.class2 {
+    @extend .class1;
+    border: 1px solid black;
+}
+
+$my-first-list: 40px, 50px, 80px;
+
+@each $size in $my-first-list {
+    .dimension-#{$size} {
+        font-size: $size;
+        height: $size;
+    }
+}
+
+@for $i from 1 through 3 {
+    li:nth-child(3n + #{$i}) {
+        background-color: lighten(blue, $i * 5%);
+    }
+}
