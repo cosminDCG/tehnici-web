@@ -19,6 +19,8 @@ var person = {
     calitati: ["frumos", "destept", "empatic"]
 }
 
+//am adaugat un comment
+
 //console.log(person.nume);
 console.log(person["nume"]);
 console.log("Varsta:", person.varsta);
