@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div>
+        <h2><%= title %></h2>
+    </div>
+
+    <div>
+        <ul>
+            <% cars.forEach(function(car) { %>
+                <li>
+                    <strong><%= car.brand + ' ' + car.model %></strong>
+                    <img src='<%= car.image %>'>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
