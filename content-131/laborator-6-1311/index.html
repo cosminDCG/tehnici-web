@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+
+    <script src="script.js"></script>
+    <style>
+        .newClass {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="headerId">This is a h1</h1>
+    <button onclick="youClickedAButton()">Click me!</button>
+
+    <div id="pContainer">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <button onclick="changeColor()">Change color</button>
+        <button onclick="changeColorFromPContainer()">Change color in container</button>
+    </div>
+
+    <p>4th paragraph</p>
+
+    <ul id="myList">
+        <li>1st line</li>
+        <li>2nd line</li>
+        <li>3rd line</li>
+    </ul>
+    <button onclick="changeFirstAndLastChild()">Change children</button>
+    <hr>
+    <div id="generatedContent">
+
+    </div>
+    <button onclick="createNewElement()">Add element</button>
+    <button onclick="removeLastElement()">Remove element</button>
+
+    <div id="div1">Text div1</div>
+    <div id="div2">Text div2</div>
+
+    <br>
+    <img id="myImg" src="./casa.jpeg">
+    <button onclick="changeImage()">Change image</button>
+</body>
+</html>
