@@ -1,0 +1,29 @@
+{
+  "dogs": [
+    {
+      "name": "AFFENPINSCHER",
+      "img": "https://images.dog.ceo/breeds/affenpinscher/n02110627_8099.jpg",
+      "id": 1
+    },
+    {
+      "id": 3,
+      "name": "CHIHUAHUA",
+      "img": "https://images.dog.ceo/breeds/chihuahua/n02085620_7613.jpg"
+    },
+    {
+      "id": 4,
+      "name": "LHASA",
+      "img": "https://images.dog.ceo/breeds/lhasa/n02098413_7358.jpg"
+    },
+    {
+      "id": 5,
+      "name": "HOUND",
+      "img": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2626.jpg"
+    },
+    {
+      "name": "Caine",
+      "img": "https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZWRpZ2lhbmltYWx3b3JsZC5y/Y3MtcmRzLnJvJTJGc3RvcmFnZSUyRjIw/MTklMkYwNCUyRjI1JTJGMTA2NzYyMl8x/MDY3NjIyX3B1aS1kZS1jYWluZS1MYWJy/YWRvci1SZXRyaWV2ZXIuanBnJnc9Nzgw/Jmg9NjAwJnpjPTEmaGFzaD0wOTYxODE0/MThiYmIwODEwMTFkYWYzZmRkYmQ4MmMyMA==.thumb.jpg",
+      "id": 6
+    }
+  ]
+}

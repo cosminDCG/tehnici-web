@@ -1,0 +1,19 @@
+{
+  "name": "tehnici-web",
+  "version": "1.0.0",
+  "description": "Inainte de a incepe sa lucrati, veti avea nevoie de urmatoarele lucruri:\r * Un editor de text (recomand [Visual Studio Code](https://code.visualstudio.com/download), dar puteti alege si altul)\r * [Node.js](https://nodejs.org/en/) instalat\r * Instalati [Git](https://git-scm.com/downloads)\r * Un cont de GitHub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosminDCG/tehnici-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosminDCG/tehnici-web/issues"
+  },
+  "homepage": "https://github.com/cosminDCG/tehnici-web#readme"
+}
