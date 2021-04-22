@@ -1,21 +1,17 @@
 var express = require('express');
-const { Client } = require('pg');
-
 var app = express();
-const client = new Client({
-    user: 'cosmin',
-    database: 'cars',
-    password: 'root',
-    port: 5432
-});
-client.connect();
 
-app.get('/', async function(req, res) {
-    let cars = [];
-    cars = await (await client.query('SELECT * FROM cars')).rows;
-    console.log('Cars outside the query: ', cars);
-    res.status(200).send(cars);
-})
+var path = require('path');
+const bodyParser = require("body-parser");
+var cors = require('cors');
+
+app.use(cors())
+app.use(bodyParser.json({limit: '200mb'}));
+app.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
+app.use(require('./controller/CarController'));
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, '../views/scripts')))
+
 
 var server = app.listen(8080, async() => {
     console.log('App is listening on port: 8080!');

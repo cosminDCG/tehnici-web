@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <%- include('../partials/head'); %>
+    <script>
+        function addNewCar() {
+            let brand = document.getElementById("brand").value;
+            let model = document.getElementById("model").value;
+            let year = parseInt(document.getElementById("year").value);
+            let image = document.getElementById("image").value;
+
+            let newCar = {
+                brand: brand,
+                model: model,
+                year: year,
+                image:image
+            }
+
+            console.log(newCar);
+
+            fetch('http://localhost:8080/add/car', {
+            method: 'post', // semnalam faptul ca vrem sa introducem ceva nou in baza de date
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: newCar
+            }).then(function(response) {
+                console.log(response);
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div>
+        <h2><%= title %></h2>
+    </div>
+
+    <div>
+        <input id="brand" placeholder="Brand...">
+        <input id="model" placeholder="Model..">
+        <input id="year" placeholder="Year...">
+        <input id="image" placeholder="Image...">
+        <button class="btn btn-md btn-info" id="add-button" onclick="addNewCar()">Add car</button>
+    </div>
+    <br>
+
+    <div>
+        <ul>
+            <% cars.forEach(function(car) { %>
+                <li>
+                    <strong><%= car.brand + ' ' + car.model %></strong>
+                    <img src='<%= car.image %>'>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
