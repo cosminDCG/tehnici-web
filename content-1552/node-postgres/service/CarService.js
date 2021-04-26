@@ -11,6 +11,25 @@ module.exports.fetchPosts = async () => {
 }
 
 module.exports.insertNewCar = async (car) => {
-    let cars = await carRepository.addCar(car);
+    await carRepository.addCar(car);
+    let cars = await carRepository.getAllCars();
+    return cars;
+}
+
+module.exports.getCarById = async (id) => {
+    let car = await carRepository.getCarById(id);
+    return car;
+}
+
+module.exports.updateCar = async (car, id) => {
+    await carRepository.updateCar(car, id);
+}
+
+module.exports.deleteCar = async(id) => {
+    await carRepository.deleteCar(id);
+}
+
+module.exports.getCarByBrand = async (brand) => {
+    let cars = await carRepository.getCarByBrand(brand);
     return cars;
 }

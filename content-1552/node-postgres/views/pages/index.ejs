@@ -2,6 +2,8 @@
 <head>
     <%- include('../partials/head'); %>
     <script>
+        let carToEdit;
+
         function addNewCar() {
             let brand = document.getElementById("brand").value;
             let model = document.getElementById("model").value;
@@ -22,9 +24,56 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: newCar
+            body: JSON.stringify(newCar)
             }).then(function(response) {
-                console.log(response);
+                window.location.reload();
+            })
+        }
+
+        function editCar(id) {
+            fetch('http://localhost:8080/car/' + id, {
+                method: 'get'
+            }).then(function(response) {
+                response.json().then((data) => {
+                    carToEdit = data.id;
+                    document.getElementById("brand").value = data.brand;
+                    document.getElementById("model").value = data.model;
+                    document.getElementById("year").value = data.year;
+                    document.getElementById("image").value = data.image;
+                })
+            })
+        }
+
+        function saveChanges() {
+            let brand = document.getElementById("brand").value;
+            let model = document.getElementById("model").value;
+            let year = parseInt(document.getElementById("year").value);
+            let image = document.getElementById("image").value;
+
+            let newCar = {
+                brand: brand,
+                model: model,
+                year: year,
+                image:image
+            }
+            console.log(newCar);
+
+            fetch('http://localhost:8080/car/' + carToEdit, {
+                method: 'put',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newCar)
+            }).then(function(response) {
+                window.location.reload();
+            })
+        }
+
+        function deleteCar(id) {
+            fetch('http://localhost:8080/car/' + id, {
+                method: 'delete'
+            }).then(function(response) {
+                window.location.reload();
             })
         }
     </script>
@@ -45,6 +94,7 @@
         <input id="year" placeholder="Year...">
         <input id="image" placeholder="Image...">
         <button class="btn btn-md btn-info" id="add-button" onclick="addNewCar()">Add car</button>
+        <button class="btn btn-md btn-success" onclick="saveChanges()">Save Changes</button>
     </div>
     <br>
 
@@ -54,7 +104,10 @@
                 <li>
                     <strong><%= car.brand + ' ' + car.model %></strong>
                     <img src='<%= car.image %>'>
+                    <button class="btn btn-sm btn-primary" onclick="editCar(<%= car.id %>)">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteCar(<%= car.id %>)">Delete</button>
                 </li>
+                <hr>
             <% }); %>
         </ul>
     </div>
