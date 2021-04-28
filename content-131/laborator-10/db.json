@@ -1,34 +1,28 @@
 {
     "dogs": [
         {
-            "id": "5eadf350-105e-11ea-983f-f5983827844a",
-            "name": "Updated Dog",
-            "img": "https://images.dog.ceo/breeds/affenpinscher/n02110627_8099.jpg"
-        },
-        {
             "id": "71ed9fb0-105e-11ea-983f-f5983827844a",
             "name": "AKITA",
-            "img": "https://images.dog.ceo//breeds//akita//An_Akita_Inu_resting.jpg"
+            "img": "https://images.dog.ceo//breeds//akita//An_Akita_Inu_resting.jpg",
+            "colors": ["white", "black"]
         },
         {
             "id": "89256140-105e-11ea-983f-f5983827844a",
             "name": "CHIHUAHUA",
-            "img": "https://images.dog.ceo/breeds/chihuahua/n02085620_7613.jpg"
+            "img": "https://images.dog.ceo/breeds/chihuahua/n02085620_7613.jpg",
+            "colors": ["white", "black"]
         },
         {
             "id": "898c1250-105e-11ea-983f-f5983827844a",
             "name": "LHASA",
-            "img": "https://images.dog.ceo/breeds/lhasa/n02098413_7358.jpg"
+            "img": "https://images.dog.ceo/breeds/lhasa/n02098413_7358.jpg",
+            "colors": ["brown"]
         },
         {
             "id": "8a7fc120-105e-11ea-983f-f5983827844a",
             "name": "HOUND",
-            "img": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2626.jpg"
-        },
-        {
-            "name": "New Dog",
-            "img": "https://s13emagst.akamaized.net/products/2467/2466340/images/res_d8871c002211a6ad36ca060e50a58cf9.jpg",
-            "id": "14365402-3b46-4917-8e06-6a9de1c0794b"
+            "img": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2626.jpg",
+            "colors": ["white"]
         }
     ]
 }

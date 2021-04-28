@@ -1,6 +1,8 @@
 var currentDogId;
 
 function fetchDogs() {
+    let content = document.getElementById("content");
+
     let body = document.getElementsByTagName("body")[0];
     let p = document.createElement("p");
     p.innerText = "loading...";
@@ -19,11 +21,11 @@ function fetchDogs() {
                 let image = document.createElement("img");
                 image.setAttribute("src", data[i].img);
                 image.width = 100;
-                body.appendChild(image);
+                content.appendChild(image);
 
                 let h2 = document.createElement("h2");
                 h2.innerText = data[i].name;
-                body.appendChild(h2);
+                content.appendChild(h2);
 
                 let editButton = document.createElement("button");
                 let editText = document.createTextNode("Edit");
@@ -33,7 +35,7 @@ function fetchDogs() {
                     document.getElementById("image").value = data[i].img;
                     currentDogId = data[i].id;
                 }
-                body.appendChild(editButton);
+                content.appendChild(editButton);
 
                 let deleteButton = document.createElement("button");
                 let deleteText = document.createTextNode("Delete");
@@ -41,10 +43,10 @@ function fetchDogs() {
                 deleteButton.onclick = function() {
                     deleteDog(data[i].id);
                 }
-                body.appendChild(deleteButton);
+                content.appendChild(deleteButton);
 
                 let hr = document.createElement("hr");
-                body.appendChild(hr);
+                content.appendChild(hr);
             }
         })
     })
@@ -97,5 +99,53 @@ function deleteDog(id) {
         }
     }).then(function(response) {
         window.location.reload();
+    })
+}
+
+function filterByColor() {
+    let content = document.getElementById("content");
+    let color = document.getElementById("filter").value;
+    fetch('http://localhost:3000/dogs/filter/property?color=' + color, {
+    method: 'get' // sunt 4 requesturi principale: GET, POST, PUT, DELETE
+    }).then(function(response) {
+        //sterg tot din body
+        while(content.hasChildNodes()) {
+            content.removeChild(content.lastChild);
+        }
+
+        response.json().then((data) => {
+
+            for(let i = 0; i < data.length; i++){
+                let image = document.createElement("img");
+                image.setAttribute("src", data[i].img);
+                image.width = 100;
+                content.appendChild(image);
+
+                let h2 = document.createElement("h2");
+                h2.innerText = data[i].name;
+                content.appendChild(h2);
+
+                let editButton = document.createElement("button");
+                let editText = document.createTextNode("Edit");
+                editButton.appendChild(editText);
+                editButton.onclick = function() {
+                    document.getElementById("name").value = data[i].name;
+                    document.getElementById("image").value = data[i].img;
+                    currentDogId = data[i].id;
+                }
+                content.appendChild(editButton);
+
+                let deleteButton = document.createElement("button");
+                let deleteText = document.createTextNode("Delete");
+                deleteButton.appendChild(deleteText);
+                deleteButton.onclick = function() {
+                    deleteDog(data[i].id);
+                }
+                content.appendChild(deleteButton);
+
+                let hr = document.createElement("hr");
+                content.appendChild(hr);
+            }
+        })
     })
 }
