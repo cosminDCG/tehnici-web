@@ -29,6 +29,9 @@ Pe parcursul semestrului vor exista 3 verificari ale proiectului, care vor viza 
   * Folosirea Ajax pentru POST, PUT, GET, DELETE (4 puncte)
   * Folosirea json-server (0.5 puncte)
 * **Node.js (9 puncte)**
+  * Sa aveti un server up and running (1 punct)
+  * Crearea celor 4 operatii CRUD (CREATE, READ, UPDATE, DELETE) care sa fie utilizate in frontend (8 puncte - 2 pentru fiecare operatie)
+     
 Cerintele pentru fiecare dintre parti vi le voi comunica in timp util
 **NU** puteti folosi librarii, framework-uri CSS sau JavaScript (cum ar fi jQuery, Bootstrap, Angular, React, etc) pentru realizarea frontend-ului
 
