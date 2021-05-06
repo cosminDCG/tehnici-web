@@ -1,34 +1,28 @@
 {
     "dogs": [
         {
-            "id": "5eadf350-105e-11ea-983f-f5983827844a",
-            "name": "Updated dog",
-            "img": "https://images.dog.ceo/breeds/affenpinscher/n02110627_8099.jpg"
-        },
-        {
             "id": "71ed9fb0-105e-11ea-983f-f5983827844a",
             "name": "AKITA",
-            "img": "https://images.dog.ceo//breeds//akita//An_Akita_Inu_resting.jpg"
+            "img": "https://images.dog.ceo//breeds//akita//An_Akita_Inu_resting.jpg",
+            "colors": ["white", "black"]
         },
         {
             "id": "89256140-105e-11ea-983f-f5983827844a",
             "name": "CHIHUAHUA",
-            "img": "https://images.dog.ceo/breeds/chihuahua/n02085620_7613.jpg"
+            "img": "https://images.dog.ceo/breeds/chihuahua/n02085620_7613.jpg",
+            "colors": ["white", "black"]
         },
         {
             "id": "898c1250-105e-11ea-983f-f5983827844a",
             "name": "LHASA",
-            "img": "https://images.dog.ceo/breeds/lhasa/n02098413_7358.jpg"
+            "img": "https://images.dog.ceo/breeds/lhasa/n02098413_7358.jpg",
+            "colors": ["brown"]
         },
         {
             "id": "8a7fc120-105e-11ea-983f-f5983827844a",
             "name": "HOUND",
-            "img": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2626.jpg"
-        },
-        {
-            "name": "Caine nou ",
-            "img": "https://thepetclub.ro/blog/wp-content/uploads/2020/08/indigestie-caini-simptome-1080x820.jpg",
-            "id": "fb387be8-2783-493a-a979-4e59d8f91179"
+            "img": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2626.jpg",
+            "colors": ["white"]
         }
     ]
 }
