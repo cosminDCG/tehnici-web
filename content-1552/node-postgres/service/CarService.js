@@ -33,3 +33,14 @@ module.exports.getCarByBrand = async (brand) => {
     let cars = await carRepository.getCarByBrand(brand);
     return cars;
 }
+
+module.exports.getCarsByName= async (carName) => {
+    let cars = await carRepository.getAllCars();
+    let carsToReturn = [];
+    for(let i = 0; i < cars.length; i++) {
+        if(cars[i].brand.toLowerCase().includes(carName) || cars[i].model.toLowerCase().includes(carName)) {
+            carsToReturn.push(cars[i]);
+        }
+    }
+    return carsToReturn;
+}

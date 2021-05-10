@@ -47,4 +47,10 @@ router.get('/car/brand/:brand', async function(req, res) {
     res.status(200).send(cars);
 })
 
+router.get('/cars/filter', async function(req, res) {
+    let carName = req.query.name;
+    let cars = await carService.getCarsByName(carName);
+    res.status(200).send(cars);
+})
+
 module.exports = router;

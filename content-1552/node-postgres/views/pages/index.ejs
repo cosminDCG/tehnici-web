@@ -76,6 +76,53 @@
                 window.location.reload();
             })
         }
+
+        function filterCars() {
+            let criteria = document.getElementById("filter").value;
+            fetch('http://localhost:8080/cars/filter?name=' + criteria, {
+                method: 'get'
+            }).then(function(response) {
+                response.json().then((data) => {
+                    let carContainer = document.getElementById("car-container");
+                    while(carContainer.hasChildNodes()) {
+                        carContainer.removeChild(carContainer.lastChild);
+                    }
+
+                    for(let i = 0; i < data.length; i++) {
+                        let li = document.createElement("li");
+                        let strong = document.createElement("strong");
+                        let strongText = document.createTextNode(data[i].brand + " " + data[i].model);
+                        strong.appendChild(strongText);
+
+                        let img = document.createElement("img");
+                        img.setAttribute("src", data[i].image);
+
+                        let editButton = document.createElement("button");
+                        editButton.className = "btn btn-sm btn-primary";
+                        let editText = document.createTextNode("Edit");
+                        editButton.appendChild(editText);
+                        editButton.onclick = function() {
+                            editCar(data[i].id);
+                        }
+
+                        let deleteButton = document.createElement("button");
+                        deleteButton.className = "btn btn-sm btn-danger";
+                        let deleteText = document.createTextNode("Delete");
+                        deleteButton.appendChild(deleteText);
+                        deleteButton.onclick = function() {
+                            deleteCar(cars[i].id);
+                        };
+
+                        li.appendChild(strong);
+                        li.appendChild(img);
+                        li.appendChild(editButton);
+                        li.appendChild(deleteButton);
+
+                        carContainer.appendChild(li);
+                    }
+                })
+            })
+        }
     </script>
 </head>
 
@@ -95,11 +142,13 @@
         <input id="image" placeholder="Image...">
         <button class="btn btn-md btn-info" id="add-button" onclick="addNewCar()">Add car</button>
         <button class="btn btn-md btn-success" onclick="saveChanges()">Save Changes</button>
+        <br> <br>
+        <input id="filter" placeholder="Search..." onkeyup="filterCars()">
     </div>
     <br>
 
     <div>
-        <ul>
+        <ul id="car-container">
             <% cars.forEach(function(car) { %>
                 <li>
                     <strong><%= car.brand + ' ' + car.model %></strong>
